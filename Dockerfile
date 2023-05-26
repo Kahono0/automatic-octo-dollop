@@ -21,8 +21,8 @@ RUN cd assets/ && \
     npm run deploy && \
     cd - && \
     mix do compile, phx.digest
-RUN mix ecto.create && \
-    mix ecto.migrate
+#RUN mix ecto.create && \
+#    mix ecto.migrate
 
 USER default
 

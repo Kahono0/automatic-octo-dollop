@@ -21,10 +21,6 @@ defmodule Rumbl.Accounts do
     |> Repo.insert()
   end
 
-  def change_user(%User{} = user) do
-    User.changeset(user, %{})
-  end
-
   def update_user(%User{} = user, attrs) do
     User.changeset(user, attrs)
     |> Repo.update()

@@ -4,8 +4,8 @@ FROM bitwalker/alpine-elixir-phoenix:latest
 EXPOSE 5000
 ENV PORT=5000 MIX_ENV=prod
 # Cache elixir deps
-ENV DATABASE_URL=
-ENV SECRET_KEY_BASE =
+ENV DATABASE_URL=postgresql://postgres:1c30Fs4FOavQzHLWg3Vj@containers-us-west-57.railway.app:6028/railway
+ENV SECRET_KEY_BASE = "9b7492e9ccdbbca13885d9013a7d1e0da2b260734d35d50c8bc79289a9b28e5e"
 ADD mix.exs mix.lock ./
 RUN mix do deps.get, deps.compile
 
